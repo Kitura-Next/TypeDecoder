@@ -1,15 +1,15 @@
 <p align="center">
-    <a href="http://kitura.io/">
-        <img src="https://raw.githubusercontent.com/IBM-Swift/Kitura/master/Sources/Kitura/resources/kitura-bird.svg?sanitize=true" height="100" alt="Kitura">
+    <a href="http://kituranext.org/">
+        <img src="https://raw.githubusercontent.com/Kitura-Next/Kitura/master/Sources/Kitura/resources/kitura-bird.svg?sanitize=true" height="100" alt="Kitura">
     </a>
 </p>
 
 <p align="center">
-    <a href="https://ibm-swift.github.io/TypeDecoder/index.html">
+    <a href="https://kitura-next.github.io/TypeDecoder/index.html">
     <img src="https://img.shields.io/badge/apidoc-TypeDecoder-1FBCE4.svg?style=flat" alt="APIDoc">
     </a>
-    <a href="https://travis-ci.org/IBM-Swift/TypeDecoder">
-    <img src="https://travis-ci.org/IBM-Swift/TypeDecoder.svg?branch=master" alt="Build Status - Master">
+    <a href="https://travis-ci.org/Kitura-Next/TypeDecoder">
+    <img src="https://travis-ci.org/Kitura-Next/TypeDecoder.svg?branch=master" alt="Build Status - Master">
     </a>
     <img src="https://img.shields.io/badge/os-macOS-green.svg?style=flat" alt="macOS">
     <img src="https://img.shields.io/badge/os-linux-green.svg?style=flat" alt="Linux">
@@ -21,7 +21,7 @@
 
 # TypeDecoder
 
-TypeDecoder is a Swift library to allow the inspection of Swift language native and complex types. It was initially written for use within the [Kitura](http://kitura.io) project but can easily be used for a wide range of projects where the dynamic inspection of types is required.
+TypeDecoder is a Swift library to allow the inspection of Swift language native and complex types. It was initially written for use within the [Kitura](http://kituranext.org) project but can easily be used for a wide range of projects where the dynamic inspection of types is required.
 
 ## Swift version
 The latest version of the TypeDecoder requires **Swift 4.0** or newer. You can download this version of the Swift binaries by following this [link](https://swift.org/download/). Compatibility with other Swift versions is not guaranteed.
@@ -30,10 +30,10 @@ The latest version of the TypeDecoder requires **Swift 4.0** or newer. You can d
 
 ### Add dependencies
 
-Add `TypeDecoder` to the dependencies within your application's `Package.swift` file. Substitute `"x.x.x"` with the latest `TypeDecoder` [release](https://github.com/IBM-Swift/TypeDecoder/releases).
+Add `TypeDecoder` to the dependencies within your application's `Package.swift` file. Substitute `"x.x.x"` with the latest `TypeDecoder` [release](https://github.com/Kitura-Next/TypeDecoder/releases).
 
 ```swift
-.package(url: "https://github.com/IBM-Swift/TypeDecoder.git", from: "x.x.x")
+.package(url: "https://github.com/Kitura-Next/TypeDecoder.git", from: "x.x.x")
 ```
 Add `TypeDecoder` to your target's dependencies:
 
@@ -281,7 +281,7 @@ extension URL: ValidKeyedCodingValueProvider {
 
 ## API documentation
 
-For more information visit our [API reference](http://ibm-swift.github.io/TypeDecoder/).
+For more information visit our [API reference](http://kitura-next.github.io/TypeDecoder/).
 
 ## Community
 
@@ -289,4 +289,4 @@ We love to talk server-side Swift, and Kitura. Join our [Slack](http://swift-at-
 
 ## License
 
-This library is licensed under Apache 2.0. Full license text is available in [LICENSE](https://github.com/IBM-Swift/TypeDecoder/blob/master/LICENSE.txt).
+This library is licensed under Apache 2.0. Full license text is available in [LICENSE](https://github.com/Kitura-Next/TypeDecoder/blob/master/LICENSE.txt).
