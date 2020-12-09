@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TypeDecoder  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="TypeDecoder  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          TypeDecoder Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">TypeDecoder Reference</a>
+      <img class="carat" src="img/carat.png" />
+      TypeDecoder  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/TypeInfo.html">TypeInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/TimeZone.html">TimeZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UUID.html">UUID</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ValidKeyedCodingValueProvider.html">ValidKeyedCodingValueProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ValidSingleCodingValueProvider.html">ValidSingleCodingValueProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/OrderedDictionary.html">OrderedDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TypeDecoder.html">TypeDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/TypeDecodingError.html">TypeDecodingError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <p align="center">
+    <a href="http://kituranext.org/">
+        <img src="https://raw.githubusercontent.com/Kitura-Next/Kitura/master/Sources/Kitura/resources/kitura-bird.svg?sanitize=true" height="100" alt="Kitura">
+    </a>
+</p>
+
+<p align="center">
+    <a href="https://www.kituranext.org/learn/">
+    <img src="https://img.shields.io/badge/docs-kitura-1FBCE4.svg" alt="APIDoc"></a>
+    <a href="https://github.com/Kitura-Next/TypeDecoder/actions?query=workflow%3ASwift+MacOS">
+    <img src="https://github.com/Kitura-Next/TypeDecoder/workflows/Swift%20MacOS/badge.svg"></a>
+    <a href="https://github.com/Kitura-Next/TypeDecoder/actions?query=workflow%3ASwift+Ubuntu">
+    <img src="https://github.com/Kitura-Next/TypeDecoder/workflows/Swift%20Ubuntu/badge.svg"></a>
+    <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
+    <a href="http://swift-at-ibm-slack.mybluemix.net/">
+    <img src="http://swift-at-ibm-slack.mybluemix.net/badge.svg" alt="Slack Status"></a>
+</p>
+<h1 id='typedecoder' class='heading'>TypeDecoder</h1>
+
+<p>TypeDecoder is a Swift library to allow the inspection of Swift language native and complex types. It was initially written for use within the <a href="http://kituranext.org">Kitura</a> project but can easily be used for a wide range of projects where the dynamic inspection of types is required.</p>
+<h2 id='swift-version' class='heading'>Swift version</h2>
+
+<p>The latest version of the TypeDecoder requires <strong>Swift 4.0</strong> or newer. You can download this version of the Swift binaries by following this <a href="https://swift.org/download/">link</a>. Compatibility with other Swift versions is not guaranteed.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='add-dependencies' class='heading'>Add dependencies</h3>
+
+<p>Add <code><a href="Structs/TypeDecoder.html">TypeDecoder</a></code> to the dependencies within your application&rsquo;s <code>Package.swift</code> file. Substitute <code>&quot;x.x.x&quot;</code> with the latest <code><a href="Structs/TypeDecoder.html">TypeDecoder</a></code> <a href="https://github.com/Kitura-Next/TypeDecoder/releases">release</a>.</p>
+<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Kitura-Next/TypeDecoder.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"x.x.x"</span><span class="p">)</span>
+</code></pre>
+
+<p>Add <code><a href="Structs/TypeDecoder.html">TypeDecoder</a></code> to your target&rsquo;s dependencies:</p>
+<pre class="highlight plaintext"><code>.target(name: "example", dependencies: ["TypeDecoder"]),
+</code></pre>
+<h3 id='using-the-typedecoder' class='heading'>Using the TypeDecoder</h3>
+
+<p><code>TypeDecoder.decode()</code> returns a <code><a href="Enums/TypeInfo.html">TypeInfo</a></code> enum which describes the type passed to <code>decode()</code>. The <code><a href="Enums/TypeInfo.html">TypeInfo</a></code> enum values are:</p>
+
+<ul>
+<li><strong>.single(Any.Type, Any.Type)</strong> - A basic type, for example String.</li>
+<li><strong>.keyed(Any.Type, [String: TypeInfo])</strong> - A keyed container type, for example a struct or class.</li>
+<li><strong>.dynamicKeyed(Any.Type, key: TypeInfo, value: TypeInfo)</strong> - A dynamically keyed container type; a Dictionary.</li>
+<li><strong>.unkeyed(Any.Type, TypeInfo)</strong> - An unkeyed container type, for example an Array or Set.</li>
+<li><strong>.optional(TypeInfo)</strong> - An optional container type.</li>
+<li><strong>.cyclic(Any.Type)</strong> - A type that refers back to its own declaration, for example an Array field in a struct containing the same type as the struct.</li>
+<li><strong>.opaque(Any.Type)</strong> - A type that cannot be decoded.</li>
+</ul>
+
+<p>For each of these enum values, the first parameter is <strong>always</strong> the original type passed to the <code><a href="Structs/TypeDecoder.html">TypeDecoder</a></code> for decoding.</p>
+<h3 id='example' class='heading'>Example</h3>
+
+<p>To use the TypeDecoder you need to declare a type which conforms to the <code>Decodable</code> protocol, such as the struct <code>StructureType</code> below.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">TypeDecoder</span>
+
+<span class="kd">struct</span> <span class="kt">StructureType</span><span class="p">:</span> <span class="kt">Decodable</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">aString</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>You then call <code>TypeDecoder.decode()</code> passing the type to be decoded. If you print the contents of the returned <code><a href="Enums/TypeInfo.html">TypeInfo</a></code> enum you can see it describes the type passed to <code>decode()</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">structureTypeInfo</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">TypeDecoder</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">StructureType</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">structureTypeInfo</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+</code></pre>
+
+<p>Printing the structureTypeInfo will output:</p>
+<pre class="highlight plaintext"><code>StructureType{
+  aString: String
+}
+</code></pre>
+
+<p>You can then use <code>.keyed(Any.Type, [String: TypeInfo])</code> to obtain a Dictionary of all the fields contained in the keyed structure, this allows you to retrieve each field&rsquo;s <code><a href="Enums/TypeInfo.html">TypeInfo</a></code> by name.</p>
+
+<p>In the case below, the type of field &ldquo;aString&rdquo; is a basic type, so you can use <code>.single(Any.Type, Any.Type)</code>. The appropriate enum value to call will vary depending on the field type, see the full implementation below for how to decode more complex types.</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="k">case</span> <span class="o">.</span><span class="nf">keyed</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="k">let</span> <span class="nv">dict</span><span class="p">)</span> <span class="o">=</span> <span class="n">structureTypeInfo</span> <span class="p">{</span>
+
+  <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">The Dictionary returned from decoding StructureType contains:</span><span class="se">\n\(</span><span class="n">dict</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+
+  <span class="c1">/// Fields that are not containers will be .single</span>
+  <span class="k">if</span> <span class="k">let</span> <span class="nv">theTypeInfo</span> <span class="o">=</span> <span class="n">dict</span><span class="p">[</span><span class="s">"aString"</span><span class="p">]</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">case</span> <span class="o">.</span><span class="nf">single</span><span class="p">(</span><span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">theTypeInfo</span> <span class="p">{</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"aString is type </span><span class="se">\(</span><span class="n">theTypeInfo</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>You will see the following output:</p>
+<pre class="highlight plaintext"><code>The Dictionary returned from decoding StructureType contains:
+OrderedDictionary&lt;String, TypeInfo&gt;(keys: ["aString"], values: ["aString": String], iteratorCount: 1)
+aString is type String
+</code></pre>
+<h2 id='full-implementation' class='heading'>Full implementation</h2>
+<pre class="highlight swift"><code><span class="c1">/// Building and running this example shows how to decode a Swift data structure.</span>
+<span class="c1">///</span>
+<span class="c1">/// You should expect to see the following output:</span>
+<span class="c1">///</span>
+<span class="c1">/// Print the returned TypeInfo and you get this:</span>
+<span class="c1">/// StructType{</span>
+<span class="c1">///   myString: String,</span>
+<span class="c1">///   myOptional: Float?,</span>
+<span class="c1">///   myCyclic: [StructType{&lt;cyclic&gt;}],</span>
+<span class="c1">///   myDict: [String:Bool],</span>
+<span class="c1">///   myArray: [Int8]</span>
+<span class="c1">/// }</span>
+<span class="c1">///</span>
+<span class="c1">/// The Dictionary returned from decoding StructType contains:</span>
+<span class="c1">/// ["myString": String, "myOptional": Float?, "myCyclic": [StructType{&lt;cyclic&gt;}], "myDict": [String:Bool], "myArray": [Int8]]</span>
+<span class="c1">///</span>
+<span class="c1">/// Each field can be individually inspected:</span>
+<span class="c1">/// myString is type String</span>
+<span class="c1">/// myDict is type Dictionary&lt;String, Bool&gt;</span>
+<span class="c1">/// myArray contains type Int8</span>
+<span class="c1">/// myOptional is type Float</span>
+<span class="c1">///</span>
+<span class="c1">/// Cyclics are harder to deal with as they're buried inside an Array type:</span>
+<span class="c1">/// myCyclic is type StructType</span>
+
+<span class="kd">import</span> <span class="kt">TypeDecoder</span>
+
+<span class="kd">struct</span> <span class="kt">StructType</span><span class="p">:</span> <span class="kt">Decodable</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">myString</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">myDict</span><span class="p">:</span> <span class="kt">Dictionary</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span> <span class="kt">Bool</span><span class="o">&gt;</span>
+    <span class="k">let</span> <span class="nv">myArray</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int8</span><span class="p">]</span>
+    <span class="k">let</span> <span class="nv">myOptional</span><span class="p">:</span> <span class="kt">Float</span><span class="p">?</span>
+    <span class="k">let</span> <span class="nv">myCyclic</span><span class="p">:</span> <span class="p">[</span><span class="kt">StructType</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">structTypeInfo</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">TypeDecoder</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">StructType</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+        <span class="c1">/// Print the returned TypeInfo and you get this:</span>
+        <span class="c1">///</span>
+        <span class="c1">/// StructType{</span>
+        <span class="c1">///   myString: String,</span>
+        <span class="c1">///   myDict: [String:Bool],</span>
+        <span class="c1">///   myArray: [Int8],</span>
+        <span class="c1">///   myOptional: Float?,</span>
+        <span class="c1">///   myCyclic: [StructType{&lt;cyclic&gt;}]</span>
+        <span class="c1">/// }</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Print the returned TypeInfo and you get this:</span><span class="se">\n\(</span><span class="n">structTypeInfo</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="k">case</span> <span class="o">.</span><span class="nf">keyed</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="k">let</span> <span class="nv">dict</span><span class="p">)</span> <span class="o">=</span> <span class="n">structTypeInfo</span> <span class="p">{</span>
+            <span class="c1">/// .keyed TypeInfo contains a Dictionary&lt;String, TypeInfo&gt; of all fields contained in</span>
+            <span class="c1">/// the keyed structure, so each field's TypeInfo can be retrieved by name.</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">The Dictionary returned from decoding StructType contains:</span><span class="se">\n\(</span><span class="n">dict</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Each field can be individually inspected:"</span><span class="p">)</span>
+
+            <span class="c1">/// Fields that are not containers will be .single</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">theTypeInfo</span> <span class="o">=</span> <span class="n">dict</span><span class="p">[</span><span class="s">"myString"</span><span class="p">]</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="k">case</span> <span class="o">.</span><span class="nf">single</span><span class="p">(</span><span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">theTypeInfo</span> <span class="p">{</span>
+                    <span class="nf">print</span><span class="p">(</span><span class="s">"myString is type </span><span class="se">\(</span><span class="n">theTypeInfo</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="c1">/// .dynamicKeyed fields are Dictionary types</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">theTypeInfo</span> <span class="o">=</span> <span class="n">dict</span><span class="p">[</span><span class="s">"myDict"</span><span class="p">]</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="k">case</span> <span class="o">.</span><span class="nf">dynamicKeyed</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="k">let</span> <span class="nv">keyTypeInfo</span><span class="p">,</span> <span class="k">let</span> <span class="nv">valueTypeInfo</span><span class="p">)</span> <span class="o">=</span> <span class="n">theTypeInfo</span> <span class="p">{</span>
+                    <span class="nf">print</span><span class="p">(</span><span class="s">"myDict is type Dictionary&lt;</span><span class="se">\(</span><span class="n">keyTypeInfo</span><span class="se">)</span><span class="s">, </span><span class="se">\(</span><span class="n">valueTypeInfo</span><span class="se">)</span><span class="s">&gt;"</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="c1">/// .unkeyed fields are Array or Set types</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">theTypeInfo</span> <span class="o">=</span> <span class="n">dict</span><span class="p">[</span><span class="s">"myArray"</span><span class="p">]</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="k">case</span> <span class="o">.</span><span class="nf">unkeyed</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="k">let</span> <span class="nv">theTypeInfo</span><span class="p">)</span> <span class="o">=</span> <span class="n">theTypeInfo</span> <span class="p">{</span>
+                    <span class="nf">print</span><span class="p">(</span><span class="s">"myArray contains type </span><span class="se">\(</span><span class="n">theTypeInfo</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="c1">/// .optional field types</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">theTypeInfo</span> <span class="o">=</span> <span class="n">dict</span><span class="p">[</span><span class="s">"myOptional"</span><span class="p">]</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="k">case</span> <span class="o">.</span><span class="nf">optional</span><span class="p">(</span><span class="k">let</span> <span class="nv">theTypeInfo</span><span class="p">)</span> <span class="o">=</span> <span class="n">theTypeInfo</span> <span class="p">{</span>
+                    <span class="nf">print</span><span class="p">(</span><span class="s">"myOptional is type </span><span class="se">\(</span><span class="n">theTypeInfo</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="c1">/// .cyclic fields are embedded inside .unkeyed (Array or Set) types  </span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">theTypeInfo</span> <span class="o">=</span> <span class="n">dict</span><span class="p">[</span><span class="s">"myCyclic"</span><span class="p">]</span> <span class="p">{</span>
+                <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Cyclics are harder to deal with as they're buried inside an Array type:"</span><span class="p">)</span>
+                <span class="k">if</span> <span class="k">case</span> <span class="o">.</span><span class="nf">unkeyed</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="k">let</span> <span class="nv">theTypeInfo</span><span class="p">)</span> <span class="o">=</span> <span class="n">theTypeInfo</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="k">case</span> <span class="o">.</span><span class="nf">cyclic</span><span class="p">(</span><span class="k">let</span> <span class="nv">theTypeInfo</span><span class="p">)</span> <span class="o">=</span> <span class="n">theTypeInfo</span> <span class="p">{</span>
+                        <span class="nf">print</span><span class="p">(</span><span class="s">"myCyclic is type </span><span class="se">\(</span><span class="n">theTypeInfo</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nf">main</span><span class="p">()</span>
+</code></pre>
+<h2 id='compatibility-with-types-that-perform-validation' class='heading'>Compatibility with types that perform validation</h2>
+
+<p>The <code><a href="Structs/TypeDecoder.html">TypeDecoder</a></code> works by using the <code>Codable</code> framework to simulate the decoding of a type. The <code>init(from: Decoder)</code> initializer is invoked for the type (and any nested types), in order to discover its structure. To create an instance without a serialized representation, the decoder provides dummy values for each field.</p>
+
+<p>However, there are cases a type may need to perform validation of these values during initialization. TypeDecoder provides a mechanism for providing acceptable values during decoding through the <code><a href="Protocols/ValidSingleCodingValueProvider.html">ValidSingleCodingValueProvider</a></code> and <code><a href="Protocols/ValidKeyedCodingValueProvider.html">ValidKeyedCodingValueProvider</a></code> protocols.</p>
+<h3 id='validsinglecodingvalueprovider' class='heading'>ValidSingleCodingValueProvider</h3>
+
+<p>Below is an example of an <code>enum</code> with a raw value of <code>String</code>. Swift can synthesize Codable conformance for such a type, producing an <code>init(from: Decoder)</code> that requires a valid String matching one of the enum cases. Here is how you can extend such a type to be compatible with TypeDecoder:</p>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Fruit</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">apple</span><span class="p">,</span> <span class="n">banana</span><span class="p">,</span> <span class="n">orange</span><span class="p">,</span> <span class="n">pear</span>
+<span class="p">}</span>
+
+<span class="c1">// Provide an acceptable value during decoding</span>
+<span class="kd">extension</span> <span class="kt">Fruit</span><span class="p">:</span> <span class="kt">ValidSingleCodingValueProvider</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validCodingValue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span>
+        <span class="c1">// Returns the string "apple"</span>
+        <span class="k">return</span> <span class="k">self</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">rawValue</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='validkeyedcodingvalueprovider' class='heading'>ValidKeyedCodingValueProvider</h3>
+
+<p>An example of a structured type, where one of the fields is validated, and an extension that enables it to be handled by the TypeDecoder:</p>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">YoungAdult</span><span class="p">:</span> <span class="kt">Codable</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span>
+
+    <span class="kd">required</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">container</span> <span class="o">=</span> <span class="k">try</span> <span class="n">decoder</span><span class="o">.</span><span class="nf">container</span><span class="p">(</span><span class="nv">keyedBy</span><span class="p">:</span> <span class="kt">CodingKeys</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="k">try</span> <span class="n">container</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">String</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">forKey</span><span class="p">:</span> <span class="kt">CodingKeys</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="k">try</span> <span class="n">container</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">Int</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">forKey</span><span class="p">:</span> <span class="kt">CodingKeys</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+        <span class="c1">// Validate the age field</span>
+        <span class="k">guard</span> <span class="k">self</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">,</span> <span class="k">self</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;=</span> <span class="mi">30</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="kt">DecodingError</span><span class="o">.</span><span class="nf">dataCorrupted</span><span class="p">(</span><span class="kt">DecodingError</span><span class="o">.</span><span class="kt">Context</span><span class="p">(</span><span class="nv">codingPath</span><span class="p">:</span> <span class="p">[],</span> <span class="nv">debugDescription</span><span class="p">:</span> <span class="s">"Age is outside the permitted range"</span><span class="p">))</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Provide a value for 'age' which is within the acceptable range</span>
+<span class="kd">extension</span> <span class="kt">YoungAdult</span><span class="p">:</span> <span class="kt">ValidKeyedCodingValueProvider</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validCodingValue</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">CodingKey</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="n">key</span><span class="o">.</span><span class="n">stringValue</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="k">self</span><span class="o">.</span><span class="kt">CodingKeys</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="nv">stringValue</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">20</span>
+        <span class="k">default</span><span class="p">:</span>
+            <span class="c1">// For any fields that are not validated, you may return nil.</span>
+            <span class="c1">// The TypeDecoder will use a standard dummy value.</span>
+            <span class="k">return</span> <span class="kc">nil</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>An example, implemented in TypeDecoder, of extending a Foundation type that requires validation, and that uses numeric CodingKeys:</p>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">URL</span><span class="p">:</span> <span class="kt">ValidKeyedCodingValueProvider</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validCodingValue</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">CodingKey</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="n">key</span><span class="o">.</span><span class="n">intValue</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="mi">1</span><span class="p">?:</span> <span class="k">return</span> <span class="s">"http://example.com/"</span>
+        <span class="k">default</span><span class="p">:</span> <span class="k">return</span> <span class="kc">nil</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='api-documentation' class='heading'>API documentation</h2>
+
+<p>For more information visit our <a href="http://kitura-next.github.io/TypeDecoder/">API reference</a>.</p>
+<h2 id='community' class='heading'>Community</h2>
+
+<p>We love to talk server-side Swift, and Kitura. Join our <a href="http://swift-at-ibm-slack.mybluemix.net/">Slack</a> to meet the team!</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>This library is licensed under Apache 2.0. Full license text is available in <a href="https://github.com/Kitura-Next/TypeDecoder/blob/master/LICENSE.txt">LICENSE</a>.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-12-09)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
